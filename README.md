@@ -9,7 +9,7 @@ e.g. CSV, JSON, API's and SQL.
 along with any providers for data sources you require.
 
 ```exs
-{:gleam_providers, "~> 0.1.0},
+{:gleam_providers, "~> 0.1.0"},
 
 {:gleam_providers_csv, "~> 0.1.0"},
 {:gleam_providers_json_schema, "~> 0.1.0"},
@@ -84,11 +84,11 @@ A provider is a module defined at `src/gleam/providers/my_provider`
 
 This module must define two functions.
 ```rust
-pub fn extension(){
+pub fn extension() {
   ".my.extension"
 }
 
-pub fn provide(schema: String): String {
+pub fn provide(schema: String) -> String {
   // Return valid Gleam Code.
 }
 ```
